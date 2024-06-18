@@ -1,4 +1,4 @@
 // Delete all docs named "Holberton school"
-double.school.deleteMany(
+db.school.deleteMany(
     { name: "Holberton school"}
 )
