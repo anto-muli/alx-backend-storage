@@ -1,0 +1,2 @@
+// Regex filter( lists docs by specific name)
+db.school.find({name: /^Holberton/ })
