@@ -1,0 +1,4 @@
+// Delete all docs named "Holberton school"
+double.school.deleteMany(
+    { name: "Holberton school"}
+)
