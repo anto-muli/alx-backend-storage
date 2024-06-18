@@ -1,6 +1,6 @@
 // update "Holberton School" DB
-double.school.update(
-    {nameof: "Holberton school" },
+db.school.update(
+    {name: "Holberton school" },
     {$set: {
             address: "972 Mission street"
         }
