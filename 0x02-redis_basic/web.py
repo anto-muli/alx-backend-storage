@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''A module c tools for request caching and tracking.
+'''A module with tools for request caching and tracking.
 '''
 import redis
 import requests
@@ -8,7 +8,7 @@ from typing import Callable
 
 
 redis_store = redis.Redis()
-'''module-level Redis instance.
+'''The module-level Redis instance.
 '''
 
 
@@ -17,7 +17,7 @@ def data_cacher(method: Callable) -> Callable:
     '''
     @wraps(method)
     def invoker(url) -> str:
-        '''The wrapper funct for caching the output.
+        '''The wrapper function for caching the output.
         '''
         redis_store.incr(f'count:{url}')
         result = redis_store.get(f'result:{url}')
